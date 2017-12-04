@@ -1,4 +1,5 @@
-#plot peak area ratios (10x vs 1x, 10x vs 3x, 3x vs 1x)  from accuracy dataset
+#plot peak area ratio histograms (10x vs 1x, 10x vs 3x, 3x vs 1x)  from accuracy dataset
+#for each ratio, plot two distributions--'passing' and 'failing' observations based on QC thresholding
 
 p <- ggplot(rbind(RatioNF101, RatioNF103, RatioNF31), aes(x=peakRatios, fill=pass)) + geom_density(alpha=0.2, position="identity") +
 	scale_x_continuous(breaks=seq(-10,10,1)) +
